@@ -1,9 +1,13 @@
+body {
+    background-color: black;
+}
 .grid-container {
     display: grid;
-    grid-column-gap: 50px;
+    grid-column-gap: 95px;
     grid-template-columns: auto auto auto;
-    background-color: #2196F3;
+    background-color: black;
     padding: 10px;
+    margin: 98px;
   }
   .grid-item {
     background-color: rgba(255, 255, 255, 0.8);
