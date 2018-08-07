@@ -1,0 +1,692 @@
+body {
+	font-family: sans-serif;
+	font-size:15px;
+	margin: 10px;
+	background: #252c35;
+	color: #98c359;
+	
+}
+a {
+	color: #98c359;
+}
+a.link {
+	text-decoration: none;
+	border-bottom: 1px dashed #839095;
+}
+div.clear {
+	clear: both;
+}
+form {
+	margin: 0;
+	padding: 0;
+}
+span.select {
+	padding-right: 25px;
+    background: url(main_icon/arrow_down.svg) right no-repeat;
+    cursor: pointer;
+    /* font-size: 23px; */
+}
+body.dzen span.select{
+    opacity: 0.25;
+}
+#logo_border { 
+	position: absolute;
+	top: 10px;
+	cursor: pointer;
+}
+body.dzen #logo {
+    /* opacity: 0.25; */
+    content: url(main_icon/dzen_logo.svg);
+}
+body.dzen #logo_border {
+	outline: 2px solid #252c35;
+}
+#content {
+	/* display: block; */
+	/* padding-left: 50%; */
+	width: 1178px;
+	margin: auto;
+	/* margin-left: -375px; */
+}
+
+#header {
+	margin-left: 90px;
+	margin-top: 60px;
+	height: 25px;
+}
+#footer {
+}
+hr {
+	position: absolute;
+	margin-top: 10px;
+	left: 10px;
+	right: 10px;
+	height: 0px;
+	border: none;
+	border-top: 1px solid #f5f5f5;
+}
+body.dzen #counter {
+	display: none;
+}
+body.dzen #social {
+	display: none;
+}
+#dict {
+    float: left;
+    cursor: pointer;
+}
+#refresh {
+	margin-left: 10px;
+}
+#refresh span {
+	display: inline-block;
+	margin-bottom: 15px;
+	width: 32px;
+    height: 32px;
+    /* margin-bottom: 15px; */
+	background: url(main_icon/refresh.svg) no-repeat;
+}
+body.dzen #refresh span {
+    opacity: 0.5;
+	/* background-position: 0 -445px; */
+}
+#speed {
+	float: right;
+	padding-left: 32px;
+	/* min-height:18px; */
+	background: url(main_icon/speed5.svg) no-repeat 0 -9px;
+	margin-right: 68px;
+	cursor: default;
+	/* *margin-top: -20px; */
+	/* width: 35px; */
+	/* height: 53px; */
+}
+body.dzen #speed {
+    background: none;
+    opacity: 0.5;
+}
+#error {
+	float: right;
+	padding-left: 25px;
+	/* min-height:35px; */
+	background: url(main_icon/error.svg) no-repeat;
+    cursor: default;
+    /* display: inline-block; */
+    /* margin-top: 5px; */
+    /* width: 35px;
+    height: 35px; */
+}
+body.dzen #error {
+    background: none;
+    opacity: 0.5;
+}
+#time {
+	float: right;
+	margin-left: 260px;
+	position: absolute;
+	padding-left: 25px;
+	background: url(main_icon/time.svg) no-repeat 0 -1px;
+	top: 60px;
+	width: 35px;
+	height: 35px;
+}
+body.dict #time,
+body.dzen #time {
+	display: none;
+}
+.nimp {
+	color: #98c359;
+}
+#time_sel,
+#dict_sel {
+	color: #98c359;
+	position: absolute;
+	background: #252c35;
+	border: 1px solid #ddd;
+	padding: 10px;
+	width: 750px;
+	margin-left: -11px;
+    margin-top: -11px;
+    /* font-size: 23px; */
+	display: none;
+	z-index: 3;
+	/* box-shadow: 5px 5px 5px #ddd;
+	-webkit-box-shadow: 5px 5px 5px #ddd;
+	-moz-box-shadow: 5px 5px 5px #ddd; */
+}
+#dict_sel span {
+	color: #0D0D0E;
+	background: #252c35;
+}
+#time_sel {
+	width: 40px;
+	margin-left: 259px;
+	top: 60px;
+}
+#dict_sel hr {
+	position: relative;
+	left: 0;
+	right: 0;
+	background: #252c35;
+}
+#dict_sel div.head {
+	color: #98c359;
+	font-weight: bold;
+	margin-bottom: 5px;
+    background: #252c35;
+    /* font-size: 23px; */
+}
+
+summary {
+	color: #98c359;
+	font-weight: bold;
+	margin-bottom: 5px;
+    background: #252c35;
+    /* font-size: 23px; */
+}
+#layout_sel .close,
+#time_sel .close,
+#my_dict .close,
+#dict_sel .close {
+	float: right;
+	cursor: pointer;
+	width: 18px;
+	height: 18px;
+	background: url(main_icon/icons.png) no-repeat 0 -400px;
+	display: inline-block;
+}
+#intext {
+	display: block;
+	padding-bottom: 3px;
+	border: none;
+	width: 100%;
+	border-bottom: 1px dotted #000;
+	background: #252c35;
+	color: #98c359;
+}
+#intext, #text {
+	font-family: Roboto, Consolas, Calibri;
+	/* font-family: DejaVu Sans Mono, Menlo, Lucida Console, monospace; */
+	font-size: 23px;
+}
+#intext:focus{
+	outline: none;
+}
+#intext.error {
+	background: #ff0;
+}
+body.dzen #intext.error {
+	background: none;
+	color: #ff0;
+}
+#intext.blur {
+	border-bottom: 1px solid #fff;
+	outline: 2px inset #000;
+}
+#text {
+	margin: 1px;
+	padding: 0;
+	margin-top: 3px;
+}
+#text div {
+	/* height: 1.2em; */
+	width: 100%;
+	margin-bottom: 1px;
+    /* text-align: justify; */
+}
+#text.penalt div.line1 {
+	height: 1.2em;
+	/* background: #ffa; */
+	width: inherit;
+	display: inline-block;
+}
+#text.error {
+	color: #f00;
+}
+body.dzen #text span.checked,
+#text span.checked {
+	color: #98c359;
+}
+body.dzen #text.error {
+	color: #000;
+}
+#text span.warn {
+	/* background: #ffa; */
+}
+#text div.line4, #text div.line5 {
+	visibility: hidden;
+}
+#question {
+	font-size: 60px;
+	margin-bottom: 10px;
+	height: 20px;
+}
+#question.error {
+	color: #f00;
+}
+#copyright {
+	margin-top: 20px;
+	margin-left: 5px;
+	padding-bottom: 10px;
+	font-size:15px;
+	float: left;
+	color: #98c359;
+	height: 20px;
+}
+body.dzen #copyright {
+	display: none;
+}
+#info {
+	margin-top: 20px;
+	padding-bottom: 10px;
+	float: right;
+}
+#info a {
+	margin-left: 20px;
+}
+body.dzen #info {
+	display: none;
+}
+span.wait {
+	padding-right: 20px;
+	background: url(main_icon/wait.gif) no-repeat top right;
+}
+span.error {
+	padding-right: 20px;
+	background: url(main_icon/error.svg) no-repeat top right;
+}
+#my_dict {
+	position: absolute;
+	background: #98c359;
+	border: 1px solid #ddd;
+	padding: 10px;
+	width: 900px;
+	margin-left: -11px;
+	margin-top: -11px;
+	display: none;
+	z-index: 2;
+	box-shadow: 5px 5px 5px #ddd;
+	-webkit-box-shadow: 5px 5px 5px #ddd;
+	-moz-box-shadow: 5px 5px 5px #ddd;
+}
+#my_dict input {
+	float: left;
+}
+#my_dict img {
+	float: right;
+	cursor: pointer;
+	margin: 5px;
+}
+#dict_data {
+	width: 99%;
+	height: 450px;
+	margin-top: 5px;
+}
+
+#keyboards {
+	margin-left: 2px;
+}
+div.keyboard {
+	cursor: default;
+	padding-top: 3px;
+	1margin-top: -25px;
+}
+div.keyboard.cur {
+	display: block;
+}
+div.keyboard.fingers div.f5 {
+	background: #ad7fa8;
+}
+div.keyboard.fingers div.f4 {
+	background: #729fcf;
+}
+div.keyboard.fingers div.f3 {
+	background: #73d216;
+}
+div.keyboard.fingers div.f2 {
+	background: #fcaf3e;
+}
+div.keyboard.fingers div.f1 {
+	background: #fce94f;
+}
+div.keyboard.fingers div.sys {
+	background: #ddd;
+}
+
+#keyboard {
+	width: 1590px;
+	float: left;
+}
+div.keyboard .line {
+	clear: left;
+}
+div.keyboard .line div {
+	float: left;
+	width: 53px;
+	height: 53px;
+	line-height: 53px;
+	font-size: 15px;
+	border: 1px solid #c7d0d4;
+	background: #4A9C6C;
+	color: #000000;
+	margin: 1px;
+	padding: 5px;
+	text-align: center;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+}
+div.keyboard sup {
+	margin-left: 5px;
+}
+div.keyboard .line div.sel {
+	background: #c7d0d4;
+}
+div.keyboard.fingers .line div.sel {
+	background: #ffa;
+}
+#keyboard div.tab {
+	width: 97px;
+}
+#keyboard div.caps {
+	width: 116px;
+}
+#keyboard div.lshift {
+	width: 143px;
+}
+#keyboard div.backspace {
+	width: 97px;
+	text-align: right;
+}
+#keyboard div.enter {
+	width: 101px;
+	text-align: right;
+}
+#keyboard div.rshift {
+	width: 143px;
+	text-align: right;
+}
+#keyboard div.altgr {
+	text-align: center;
+}
+div.keyboard div.sys {
+	font-size: 10px;
+	text-align: left;
+	color: #95a0a4;
+}
+div.keyboard div.backspace.off {
+	color: #ddd;
+}
+#keyboard span.layout {
+	border: none;
+	float: left;
+	margin-left: 25px;
+	margin-bottom: 5px;
+}
+#keyboard div.space div {
+	width: 386px;
+	height: 53px;
+	border: none;
+	margin-left: -5px;
+	margin-top: -5px;
+}
+#keyboard div.space div.sel_left {
+	border: 1px solid #c7d0d4;
+	background: #c7d0d4;
+}
+#keyboard.fingers div.space div.sel_left {
+	border: 1px solid #ffa;
+	background: #ffa;
+}
+#keyboard div.space div.sel_right {
+	border: 1px solid #c7d0d4;
+	background: #c7d0d4;
+	margin-left: 150px;
+	margin-top: -5px;
+}
+#keyboard.fingers div.space div.sel_right {
+	border: 1px solid #ffa;
+	background: #ffa;
+	margin-left: 150px;
+	margin-top: -5px;
+}
+#keyboard div.space {
+	margin-left: 258px;
+	width: 386px;
+	height: 53px;
+}
+div.keyboard div.hand {
+	border: 1px solid #888;
+}
+div.keyboard div.start {
+	text-decoration: underline;
+}
+div.keyboard div.select {
+	margin-top: 40px;
+	text-align: center;
+}
+#keyboard #klavarog div.line div {
+	width: 37px;
+}
+#keyboard #klavarog div.line div.sys {
+	text-align: center;
+}
+#keyboard #klavarog div.line div.blank {
+	border: 1px solid #fff;
+}
+#keyboard #klavarog div.line div.left4 {
+	margin-left:205px;
+}
+#keyboard #klavarog div.line div.space,
+#keyboard #klavarog div.line div.lshift {
+	width: 57px;
+	margin-left: 0;
+}
+#keyboard #klavarog div.line div.blank2 {
+	width: 89px;
+	margin-left: 0;
+}
+#keyboard #klavarog div.line div.center2 {
+	margin-right:40px;
+}
+#keyboard #klavarog div.start sub {
+	text-decoration: none;
+}
+#keyboard #klavarog div.space div {
+	font-size: 10px;
+	margin: 0;
+	padding: 0;
+}
+#keyboard #klavarog div.space div.sel_left {
+	border: none;
+	background: none;
+	margin-left: 0;
+	margin-top: 0;
+}
+#keyboard #klavarog div.space div.sel_right {
+	border: none;
+	background: none;
+	margin-left: 0;
+	margin-top: 0;
+}
+#numkeyboard {
+	margin-left: 430px;
+	width: 520px;
+	clear: right;
+	margin-top: 20px;
+	*margin-top: 0;
+}
+#numkeyboard div.plus {
+	position: absolute;
+	margin-left: 202px;
+	*margin-left: 1px;
+	height: 120px;
+	line-height: 88px;
+	zoom: 1;
+}
+#numkeyboard div.enter {
+	position: absolute;
+	margin-left: 202px;
+	*margin-left: 1px;
+	height: 120px;
+	line-height: 88px;
+}
+#numkeyboard div.zero {
+	width: 120px;
+}
+#numkeyboard div.sys {
+	text-align: center;
+}
+#hide_keyboard {
+	cursor: pointer;
+	float: right;
+	margin-top: 3px;
+	margin-left: 12px;
+	width: 35px;
+	height: 35px;
+	display: inline-block;
+	background: url(main_icon/hide_keyboard.svg) no-repeat;
+	z-index: 2;
+}
+#show_keyboard {
+	cursor: pointer;
+	float: right;
+	margin-top: 3px;
+	/* margin-left: 15px; */
+	width: 35px;
+	height: 35px;
+	display: inline-block;
+	background: url(main_icon/show_keyboard.svg) no-repeat;
+	z-index: 2;
+}
+/* #hide_hand {
+	cursor: pointer;
+	float: right;
+	margin-top: 3px;
+	margin-left: 15px;
+	width: 32px;
+	height: 20px;
+	display: inline-block;
+	background: url(main_icon/icons.png) no-repeat 0 -150px;
+} */
+/* #show_hand {
+	cursor: pointer;
+	float: right;
+	margin-top: 3px;
+	margin-left: 15px;
+	width: 32px;
+	height: 20px;
+	display: inline-block;
+	background: url(main_icon/icons.png) no-repeat 0 -200px;
+} */
+#hide_color {
+	cursor: pointer;
+	float: right;
+	margin-top: 8px;
+	margin-left: 12px;
+	width: 26px;
+	height: 26px;
+	display: inline-block;
+	background: url(main_icon/hide_color.svg) no-repeat;
+}
+#show_color {
+	cursor: pointer;
+	float: right;
+	margin-top: 8px;
+	margin-left: 12px;
+	width: 26px;
+	height: 26px;
+	display: inline-block;
+	background: url(main_icon/show_color.svg) no-repeat;
+}
+#hide_sound {
+	cursor: pointer;
+	float: right;
+	margin-top: 8px;
+	margin-left: 12px;
+	width: 26px;
+	height: 26px;
+	display: inline-block;
+	background: url(main_icon/hide_sound.svg) no-repeat;
+}
+#show_sound {
+	cursor: pointer;
+	float: right;
+	margin-top: 8px;
+	margin-left: 12px;
+	width: 26px;
+	height: 26px;
+	display: inline-block;
+	background: url(main_icon/show_sound.svg) no-repeat;
+}
+#hide_autobackspace {
+	cursor: pointer;
+	float: right;
+	margin-top: 3px;
+	margin-left: 15px;
+	width: 32px;
+	height: 20px;
+	display: inline-block;
+	background: url(main_icon/icons.png) no-repeat 0 -600px;
+}
+#show_autobackspace {
+	cursor: pointer;
+	float: right;
+	margin-top: 3px;
+	margin-left: 15px;
+	width: 32px;
+	height: 20px;
+	display: inline-block;
+	background: url(main_icon/icons.png) no-repeat 0 -550px;
+}
+div.keyboard.hide {
+	visibility: hidden;
+}
+#layout {
+	1float: left;
+	position: absolute;
+	margin-left: 5px;
+	1margin-bottom: 5px;
+	margin-top: -25px;
+}
+/* #hands div.hand {
+	display: none;
+	position: absolute;
+	width: 58px;
+	height: 100px;
+	z-index: 1;
+	zoom: 1;
+	opacity: 0.7;
+	background: url(main_icon/hands.png) no-repeat;
+} */
+
+#layout_sel {
+	position: absolute;
+	background: #252c35;
+	border: 1px solid #ddd;
+	padding: 10px;
+	width: 150px;
+	margin-left: -6px;
+	margin-top: -36px;
+	display: none;
+	z-index: 3;
+	box-shadow: 5px 5px 5px #ddd;
+	-webkit-box-shadow: 5px 5px 5px #ddd;
+	-moz-box-shadow: 5px 5px 5px #ddd;
+}
+#layout_sel hr {
+	position: relative;
+	left: 0;
+	right: 0;
+}
+#layout_sel div {
+	margin-bottom: 5px;
+}
+#block_keyboards {
+	height: 270px;
+	margin-top: 20px;
+}
+body.dzen #block_keyboards {
+	visibility: hidden;
+}
+/* #error, #speed {cursor:pointer;} */

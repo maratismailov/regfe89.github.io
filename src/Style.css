@@ -1,0 +1,98 @@
+.App {
+  text-align: left;
+  background: #252c35;
+  color: #98c359;
+  /* font-size: 1cm; */
+  /* margin: 15%; */
+  margin-left: 15.5%;
+  margin-right: 15.5%;
+  width: 69%;
+  margin-top: 1cm;
+}
+
+.Table{
+  display: table;
+  margin-left: 15.5%;
+  margin-top: 0.8%;
+  /* width: 69%; */
+  border-spacing: 15px 0;
+}
+
+.Table-row {
+  /* width: 12%; */
+  display: table-row;
+}
+
+.Menu {
+  margin-top: 0.8%;
+  margin-left: 15.5%;
+  /* width: 12%; */
+  
+}
+
+.rc-menu {
+  display: table-cell;
+  background-color: #252c35;
+  /* color: #98c359; */
+  font-size: 18px;
+  /* width: 32%; */
+  /* width: fit-content; */
+  /* margin-left: 15.5%; */
+  /* margin-right: 25.5%; */
+  /* margin-top: 1cm; */
+  /* height: 12; */
+}
+
+.react-select-plus {
+  display: table-cell;
+  background-color: #252c35;
+  /* color: #98c359; */
+  width: 63%;
+  font-size: 18px;
+  /* margin-left: 15.5%;
+  margin-right: 15.5%;
+  margin-top: 1cm; */
+}
+
+.Empty div {
+  width: 25px;
+}
+
+.SelectElement {
+    background-color: #252c35 !important;
+    color: #98c359 !important;
+    /* width: 69%; */
+    /* margin-left: 15.5%;
+    margin-right: 15.5%;
+    margin-top: 1cm; */
+}
+
+.Select-placeholder,
+  .Select--single > .Select-control .Select-value {
+    bottom: 0;
+    background-color: #252c35 !important;
+    color: #98c359 !important;
+    left: 0;
+    line-height: 34px;
+    padding-left: 10px;
+    padding-right: 10px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+.Error {
+  text-align: left;
+  background: #d4d22e;
+  color: #0f0f0e;
+  /* font-size: 1cm; */
+  /* margin: 15%; */
+  margin-left: 15.5%;
+  margin-right: 15.5%;
+  width: 69%;
+  margin-top: 1cm;
+}
